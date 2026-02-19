@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
-// Create database
+// Create database for project quickfix
 const db = new sqlite3.Database(path.join(__dirname, 'quickfix.db'));
 
 // Create tables
