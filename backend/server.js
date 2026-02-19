@@ -17,7 +17,7 @@ const io = socketIo(server, {
 app.use(cors());
 app.use(express.json());
 
-// Database connection
+// Database connection const
 const db = new sqlite3.Database(path.join(__dirname, 'quickfix.db'));
 
 // Initialize database
