@@ -7,7 +7,7 @@ A comprehensive web-based home maintenance service platform that connects custom
 **Course**: B.Tech 3-2 Semester E2E Mini Project  
 **Technology Stack**: React.js + Node.js + Express.js + SQLite  
 **Database**: SQLite for simplified deployment  
-**Team Members**: [Add your team member names here]
+**Team Members**: M.Jaswanth,M.Venkatesh,K.Gowtham,M.Dharani
 
 ## 📦 Git Repository
 
