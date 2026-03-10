@@ -24,7 +24,7 @@ interface User {
 }
 
 // API Configuration
-axios.defaults.baseURL = 'http://localhost:5001/api';
+axios.defaults.baseURL = 'https://quickfix-backend-zwti.onrender.com/api';
 
 const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -44,7 +44,7 @@ const App: React.FC = () => {
     setLoading(false);
 
     // Initialize socket connection
-    const newSocket = io('http://localhost:5001');
+    const newSocket = io('https://quickfix-backend-zwti.onrender.com');
     setSocket(newSocket);
 
     return () => {
