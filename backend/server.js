@@ -66,8 +66,17 @@ db.serialize(() => {
     (5, 'AC Repair', 'Appliance', 'Air conditioner servicing and repair', 450.00),
     (6, 'Home Cleaning', 'Cleaning', 'Deep cleaning and maintenance', 300.00)`);
 
+  // Insert test users (password for all: 'password')
   db.run(`INSERT OR IGNORE INTO users (id, name, email, password, phone, role) VALUES
-    (1, 'Admin User', 'admin@quickfix.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '9999999999', 'admin')`);
+    (1, 'Admin User', 'admin@test.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '9999999999', 'admin'),
+    (2, 'Test Customer', 'customer@test.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '9876543210', 'customer'),
+    (3, 'Test Provider', 'provider@test.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '9876543211', 'provider')`);
+  
+  // Insert sample bookings for testing
+  db.run(`INSERT OR IGNORE INTO bookings (id, customer_id, service_id, urgency, time_slot, location, scheduled_date, total_price, status) VALUES
+    (1, 2, 1, 'normal', 'morning', 'Banjara Hills, Hyderabad', datetime('now', '+1 day'), 650, 'accepted'),
+    (2, 2, 2, 'urgent', 'evening', 'Gachibowli, Hyderabad', datetime('now', '+2 days'), 780, 'in_progress'),
+    (3, 2, 5, 'emergency', 'morning', 'Jubilee Hills, Hyderabad', datetime('now', '+3 days'), 1170, 'pending')`);
 });
 
 // JWT middleware
