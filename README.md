@@ -48,7 +48,7 @@ This repository contains all module-wise code, documentation, and regular update
 - **Backend**: Node.js with Express.js
 - **Database**: SQLite
 - **Real-time**: Socket.io
-- **Authentication**: Session-based
+- **Authentication**: JWT
 - **Styling**: CSS3 with Serene Cool Tones design system
 
 ## 📋 Prerequisites
