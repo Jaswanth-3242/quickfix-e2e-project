@@ -17,8 +17,11 @@ const io = socketIo(server, {
 app.use(cors());
 app.use(express.json());
 
-// Database connection const
-const db = new sqlite3.Database(path.join(__dirname, 'quickfix.db'));
+// Use in-memory DB on Render (no persistent disk), file DB locally
+const isProduction = process.env.RENDER || process.env.NODE_ENV === 'production';
+const db = isProduction
+  ? new sqlite3.Database(':memory:')
+  : new sqlite3.Database(path.join(__dirname, 'quickfix.db'));
 
 // Initialize database
 db.serialize(() => {
