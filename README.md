@@ -8,6 +8,7 @@ A comprehensive web-based home maintenance service platform that connects custom
 **Technology Stack**: React.js + Node.js + Express.js + SQLite  
 **Database**: SQLite for simplified deployment  
 **Team Members**: M.Jaswanth,M.Venkatesh,K.Gowtham,M.Dharani
+**Deployment link:https://quickfix-frontend-y42h.onrender.com
 
 ## 📦 Git Repository
 
@@ -222,6 +223,7 @@ quickfix-project/
 - Secondary: #14B8A6 (Teal)
 - Accent: #84CC16 (Sage Green)
 - Modern, trustworthy, and professional aesthetic
+  
 
 ## 📊 Git Workflow
 
