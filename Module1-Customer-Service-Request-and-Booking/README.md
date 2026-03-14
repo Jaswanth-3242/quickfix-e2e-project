@@ -1,15 +1,14 @@
-# Module 1 - User Authentication & Service Browsing
+# Module 1: Customer Service Request & Booking
 
 ## Features
-- User Registration (Customer / Provider / Admin)
-- Secure Login with JWT authentication
-- Role-based Access Control
-- Service Catalog with 8+ categories
-- Password hashing with bcrypt
+- User registration and authentication
+- Service browsing and selection
+- Real-time booking system
+- Customer dashboard with booking history
 
 ## Frontend Files
-- `Login.tsx` - Login and Registration forms
-- `Home.tsx` - Service catalog and landing page
+- `Login.tsx` - User registration and login forms
+- `Home.tsx` - Service browsing and selection
 - `Navbar.tsx` - Navigation with role-based links
 
 ## Backend API Endpoints
@@ -18,6 +17,8 @@
 | POST | /api/auth/register | Register new user |
 | POST | /api/auth/login | Login user |
 | GET | /api/services | Get all services |
+| POST | /api/bookings | Create new booking |
+| GET | /api/bookings/customer/:id | Get customer booking history |
 
 ## Demo Credentials
 - Customer: customer@test.com / password
